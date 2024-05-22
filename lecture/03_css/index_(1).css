@@ -1,0 +1,19 @@
+/* <div class="yellow"></div>
+<div class="green"></div>
+<div id="blue"></div> */
+
+
+.yellow {
+    width: 200px; 
+    background-color: yellow;
+}
+
+.green {
+    width: 250px; 
+    background-color: green;
+}
+
+#blue {
+    width: 300px; 
+    background-color: blue;
+}

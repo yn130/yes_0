@@ -1,0 +1,48 @@
+/* * : 전체 선택자 */
+* {
+    color: red;
+}
+
+/* 태그명 : 태그 선택자 */
+h1 {
+    background-color: aquamarine;
+}
+p {
+    background-color: beige;
+}
+span {
+    color: blue;
+}
+
+/* .클래스명 : 클래스 선택자 */
+.second {
+    background-color: pink;
+}
+.small { 
+font-size: 10px;
+}
+.big {
+    font-size: 30px;
+}
+.dog {
+    color: aqua;
+}
+
+/* .id명 : id 선택자 */
+.first {
+    background-color: blueviolet;
+}
+
+.hello {
+    color: green;
+}
+
+.hi {
+    color: blue;
+}
+#my-hello {
+    color: black;
+}
+#one {
+    color: blueviolet;
+}
