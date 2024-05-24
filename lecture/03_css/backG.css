@@ -1,0 +1,24 @@
+.a {
+    height: 300px;
+    width: 300px;
+    border: 10px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+    background-image: url(./image/cat.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100px;
+    background-size: 100px;
+}
+
+.b { 
+    height: 350px;
+    width: 350px;
+    border-style: solid;
+    border-color: pink;
+    border-width: 10px;
+    border-radius: 50%;
+    /* background: linear-gradient(pink yellow); */
+}

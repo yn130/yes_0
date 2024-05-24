@@ -1,0 +1,29 @@
+* {
+    height: 200px;
+    width: 200px;
+}
+.a {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 2px 5px 10px;
+}
+
+.b {
+    border-color: red;
+    border-width: 10px;
+    border-style: dashed dotted double groove ;
+}
+
+.c {   
+    border-style: solid;
+    border-width: 10px;
+    border-color: grey red green blue;  
+}
+
+.d {
+    border-color: grey red green gray;  
+    border-style: dashed dotted double groove ;
+    border-style: dashed double groove dotted ;
+    border-width: 15px 5px 5px 15px;
+    border-radius: 5px 20px 0 50%;
+}

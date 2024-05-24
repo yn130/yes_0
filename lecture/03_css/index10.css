@@ -1,0 +1,31 @@
+.div-inline1 {
+    display: inline;
+    background-color: blue
+}
+
+.div-inline2 {
+    display: inline;
+    background-color: red
+
+}
+
+
+.d-block1 {
+    display: block;
+    background-color: blue
+}
+
+.d-block2 {
+    display: block;
+    background-color: red
+}
+
+.d-inline-block1 {
+    display: inline-block;
+    background-color: aqua;
+}
+
+.d-inline-block2 {
+    display: inline-block;
+    background-color: pink;
+}

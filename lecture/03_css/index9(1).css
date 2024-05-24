@@ -1,0 +1,110 @@
+/* div { 
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    overflow-x: scroll;
+}
+
+div:hover {
+    width: 300px;
+    height: 300px;
+    transition:1s, 0.5s;
+} */
+
+/* ----------------------------------- */
+
+
+
+
+/* .background {
+    background-color: grey;
+    height: 600px;
+    position: relative;
+}
+
+.a {
+    width: 400px;
+    height: 200px;
+    background-image: url(./image/landscape2.jpeg);
+    background-size: auto;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    transform: skewY(20deg);
+    z-index: 3;
+}
+.a:hover {
+    transform: skewY(0deg);
+    transition: 1s ;
+}
+
+.b {
+    width: 400px;
+    height: 200px;
+    background-image: url(./image/landscape3.jpeg);
+    background-size: auto;
+    position: absolute;
+    left: 400px;
+    top: 200px;
+    transform: skewY(20deg);
+    z-index: 2;
+}
+.b:hover {
+    transform: skewY(0deg);
+    z-index: 4;
+    transition: 1s ;
+}
+
+.c {
+    width: 400px;
+    height: 200px;
+    background-image: url(./image/landscape4.jpeg);
+    background-size: auto;
+    position: absolute;
+    left: 600px;
+    top: 200px;
+    transform: skewY(20deg);
+    z-index: 1;
+}
+.c:hover {
+    transform: skewY(0deg);
+    transition: 1s ;
+    z-index: 5;
+} */
+
+
+
+.container {
+    position: relative;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+.a:hover {
+    width: 200px;
+    transition: 1s;
+}
+
+.b:hover {
+    transform-origin: bottom;
+    transform: skewX(-40deg);
+    transition: 1s;
+}
+
+.c:hover {
+    border-radius: 50%;
+    background-color: red;
+    transform: translate(300px) rotate(360deg);
+    transition: 1s;
+}
+.d:hover {
+    transform: scale(2) rotateY(360deg);
+    background-color: yellow;
+    transition: 1s;
+}

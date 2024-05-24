@@ -1,0 +1,38 @@
+
+
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    font-weight: 500;
+}
+/* 
+    기본값이기 때문에 작성하지 않더라도 적용 
+    인라인요소 : 왼 -> 오 쌓임 
+    블럭요소 : 위 -> 아래 쌓임 
+
+*/
+.position-static {
+    background-color: red;
+    position: static;
+}
+
+.position-relative {
+    background-color: aqua;
+    position: relative;
+    left: 100px;
+}
+
+.position-absolute {
+    background-color: blueviolet;
+    position: absolute;
+    left: 100px;
+}
+
+.position-fixed {
+    background-color:darkorange;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
