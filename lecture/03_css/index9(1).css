@@ -17,7 +17,7 @@ div:hover {
 
 
 
-/* .background {
+.background {
     background-color: grey;
     height: 600px;
     position: relative;
@@ -71,39 +71,39 @@ div:hover {
     transform: skewY(0deg);
     transition: 1s ;
     z-index: 5;
-} */
+}
 
+/*-----------------  */
 
-
-.container {
+.d {
     position: relative;
 }
 
-div {
+ye {
     width: 100px;
     height: 100px;
     background-color: aqua;
     border: 1px solid black;
 }
 
-.a:hover {
+.block1:hover {
     width: 200px;
     transition: 1s;
 }
 
-.b:hover {
+.block2:hover {
     transform-origin: bottom;
     transform: skewX(-40deg);
     transition: 1s;
 }
 
-.c:hover {
+.block3:hover {
     border-radius: 50%;
     background-color: red;
     transform: translate(300px) rotate(360deg);
     transition: 1s;
 }
-.d:hover {
+.block4:hover {
     transform: scale(2) rotateY(360deg);
     background-color: yellow;
     transition: 1s;
