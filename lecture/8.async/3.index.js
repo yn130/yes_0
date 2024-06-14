@@ -116,8 +116,9 @@ function nopay() {
 
 async function exec() {
     try{
+        // 함수의 실행 순서가 명확히 보인다! 
         goMart();
-        await pickDrink();
+        await pickDrink(); // 시간이 걸리는 pickDrink()함수의 작업을 await 키워드로 인해 기다려 줌 
         pay();
     } catch(err) {
         nopay();
