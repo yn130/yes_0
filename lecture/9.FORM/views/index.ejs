@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1><%= title %></h1>
-
+<!-- 
     <h2> GET 방식으로 요청하는 폼</h2>
     <form action="/getForm" method="get">
         <input type="text" name="id" placeholder="아이디">
@@ -20,6 +20,28 @@
     <form action="/postForm" method="post">
         <input type="text" name="id" placeholder="아이디">
         <input type="password" name="pw" placeholder="패스워드">
+        <button type="submit">post 방식으로 폼 제출 </button>
+    </form> -->
+
+    <!-- form validation -->
+
+    <h2> GET 방식으로 요청하는 폼</h2>
+    <form action="/getForm" method="get">
+        <input type="text" name="id" placeholder="아이디(최소 3글자. 필수 값)" minlength='3' required>
+        <input type="password" name="pw" placeholder="패스워드(최소 4글자, 필수 값)" minlength='4' required>
+
+        <!-- 퀴즈 --><br> 
+        <input type="email" id="email" name="email" placeholder="abc@def.ghi / 필수값" required><label for="grade">이메일</label><br> 
+        <input type="number" id="grade" name="grade" min="1" max="4"><label for="grade">학년</label>
+
+        <button type="submit">Get 방식으로 폼 제출 </button>
+    </form>
+
+
+    <h2> POST 방식으로 요청하는 폼</h2>
+    <form action="/postForm" method="post">
+        <input type="text" name="id" placeholder="아이디" pattern="^([a-zA-Z0-9가-힣]){4,}$" title="대소문자, 한글, 숫자, 4글자 이상" required>
+        <input type="password" name="pw" placeholder="패스워드" pattern="^([a-z0-9]){8,12}$" title="소문자, 숫자로 8자리 이상 12자리 이하" required>
         <button type="submit">post 방식으로 폼 제출 </button>
     </form>
 </body>
