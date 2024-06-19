@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="width: 300px; height: 500px;">
+        <img src="<%= src %>" alt="러닝메이트" height="30%">
+        <h3><%= userInfo.id %>님 환영합니다!</h3>
+        <div>비밀번호 : <%= userInfo.password%></div>
+        <div>이름 : <%= userInfo.name%></div>
+        <div>나이 : <%= userInfo.age%></div>
+    </div>
+</body>
+</html>

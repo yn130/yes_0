@@ -10,6 +10,8 @@ app.set('views', './views');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use('/static', 
+    express.static(__dirname + '/public'));
 app.use('/uploads', express.static(__dirname + '/uploads'));
 // const upload = multer({
 //     dest: 'uploads/',
@@ -44,7 +46,7 @@ app.post("/upload", uploadDetail.single('userfile'), (req, res) => {
     //   }
 
     // res.send('Success upload!');
-    res.render('result', { title: req.body.title, src: req.file.path });
+    res.render('uploaded', { title: req.body.title, src: req.file.path });
 
     // 파일 탐색기 > uploads 폴더가 생성!
     // 확장자 없이 파일명이 자동으로 저장됨 (multer 객체를 생성할 때 dest 옵션 외에 설정을 한 게 없어서)
@@ -67,6 +69,11 @@ app.post('/upload/fields', uploadDetail.fields([{ name: 'kiwi' }, { name: 'orang
     res.send('Success Upload!! (multiple2)');
 });
 
+// 동적 폼 업로드
+app.post('/dynamicFile', uploadDetail.single('thumbnail'), (req, res) => {
+    res.send(req.file);
+})
+
 app.get('/', function (req, res) {
     res.render('index', { title: '파일 업로드를 배워보자!!!' });
 });
@@ -74,3 +81,17 @@ app.get('/', function (req, res) {
 app.listen(PORT, function () {
     console.log(`http://localhost:${PORT}`);
 });
+
+
+
+///////////////////////////////
+// path 내장 모듈
+// const path = require('path');
+
+// const ext = path.extname('hello.txt'); // extname: 확장자를 추출해주는 메서드
+// const base = path.basename('hello.txt', ext); // basename: 파일명에서 확장자를 제외한 파일 이름만 추출
+// const result = base + Date.now() + ext; // 파일명 + 현재시각 + 확장자
+
+// console.log(ext); // .txt
+// console.log(base); // hello
+// console.log(result); // hello1718771926535.txt
