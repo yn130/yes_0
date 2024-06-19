@@ -6,9 +6,9 @@
     <title>Document</title>
 
     <!-- Axios CDN -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <link rel="stylesheet" href="/static/css/thumbnail.css"> -->
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <form action="/upload" method="POST" enctype="multipart/form-data">
@@ -19,6 +19,17 @@
         <input type="file" name="userfile"><br><br>
         <button type="submit">회원가입</button>
     </form>
+
+    <h2>동적 파일 업로드</h2>
+    <input type="file" name="thumbnail" id="thumbnail"><br>
+    <input type="text" name="title-name" id="title-name">
+    <button type="button" onclick="uploadThumbnail();">업로드</button>
+    <br>
+
+    <img src="" alt=""><br>
+    <div class="text-container"></div>
+
+    <script src="/static/js/thumbnail.js"></script>
    
 </body>
 </html>
