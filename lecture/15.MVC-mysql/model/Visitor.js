@@ -17,6 +17,7 @@ const conn = mysql.createConnection({
   database: 'codingon'
 }); // database 연결 객체
 
+// 조회
 exports.getVisitors = (callback) => {
   conn.query(`select * from visitor`, (err, rows) => {
     if (err) {
@@ -26,8 +27,9 @@ exports.getVisitors = (callback) => {
     console.log('model/Visitor.js >> ', rows);
     callback(rows)
   })
-};    
+};  
 
+//등록
 exports.postVisitor = (data, callback) => {
   conn.query(`insert into visitor(name, comment) values ('${data.name}', '${data.comment}')`, 
     (err, rows) => {
@@ -51,6 +53,52 @@ exports.postVisitor = (data, callback) => {
   )
 }
 
+//삭제
+exports.deleteVisitor = (targetId, callback) => {
+  // targetId: 삭제해야할 visitor id
+  conn.query(`delete from visitor where id=${targetId}`, (err, rows) => {
+    if (err) {
+      throw err;
+    }
 
+    console.log('model/Visitor.js >> ', rows);
+    // OkPacket {
+    //   fieldCount: 0,
+    //   affectedRows: 1,
+    //   insertId: 0,
+    //   serverStatus: 2,
+    //   warningCount: 0,
+    //   message: '',
+    //   protocol41: true,
+    //   changedRows: 0
+    // }
+    callback(true); // 삭제
+  })
+}
 
+// 수정
+exports.getVisitor = (targetId, callback) => {
+  conn.query(`select * from visitor where id=${targetId}`, (err, rows) => {
+    if (err) {
+      throw err;
+    }
 
+    console.log('model/Visitor.js >> ', rows);
+    // model/Visitor.js >>  [ RowDataPacket { id: 6, name: 'lily', comment: 'hello' } ]
+    callback(rows[0])  
+  })
+}
+
+exports.patchVisitor = (updateData, callback) => {
+  const { id, name, comment } = updateData;
+  conn.query(
+    `update visitor set name='${name}', comment='${comment}' where id=${id} `,
+    (err, rows) => {
+      if (err) {
+        throw err;
+      }
+
+      console.log('model/Visitor.js >> ', rows);
+      callback(true);
+    });
+}

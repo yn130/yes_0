@@ -5,6 +5,7 @@ exports.main = (req, res) => {
   res.render('index');
 };
 
+//조회
 // (2) GET /visitors => localhost:PORT/visitors
 exports.getVisitors = (req, res) => {
   // console.log(Visitor.getVisitors); // [Function (anonymous)]
@@ -23,6 +24,8 @@ exports.getVisitors = (req, res) => {
   })
 };
 
+
+// 등록
 exports.postVisitor = (req, res) => {
   console.log(req.body);
 
@@ -36,3 +39,34 @@ exports.postVisitor = (req, res) => {
       comment: req.body.comment})
   });
 }
+
+// 삭제
+exports.deleteVisitor = (req, res) => {
+  console.log(req.body);
+
+  Visitor.deleteVisitor(req.body.id, (result) => {
+    console.log('controller/CVisitor.js >> ', result);
+    
+    res.send({ result }); // { result: result }
+  })
+}
+
+
+// 수정
+exports.getVisitor = (req, res) => {
+  // req.params.id: // 조회해야할 id
+  Visitor.getVisitor(req.params.id, (result) => {
+    res.send(result);
+  }); 
+}
+
+exports.patchVisitor = (req, res) => {
+  console.log(req.body);
+
+  Visitor.patchVisitor(req.body, (result) => {
+    console.log('controller/CVisitor.js >> ', result);
+
+    res.send({result});
+  })
+}
+
