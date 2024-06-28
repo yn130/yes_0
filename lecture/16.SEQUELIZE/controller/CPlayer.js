@@ -70,6 +70,8 @@ exports.patchPlayer= async (req, res) => {
 exports.deletePlayer = async (req, res) => {
     try {
         const { player_id } = req.params;
+
+        //DELETE FROM `Player` WHERE `player_id` = '?'
         const isDeleted = await Player.destroy({
             where: { player_id }
         });

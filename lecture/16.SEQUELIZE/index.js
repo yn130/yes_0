@@ -3,6 +3,7 @@ const app = express();
 const PORT = 8000;
 const router = require('./routes/index');
 const playerRouter = require('./routes/player')
+const teamsRouter = require('./routes/team')
 const { sequelize } = require('./models/index')
 
 app.set('view engine', 'ejs');
@@ -12,9 +13,11 @@ app.use(express.json());
 
 app.use('/', router);
 app.use('/players',playerRouter);
+app.use('/teams',teamsRouter);
 
 sequelize 
-    // force
+    // force: true; 서버 실행때 마다 테이블을 재 생성
+    // force: false; 서버 실행 시 테이블이 없으면 생성
     .sync({ force: false})
     .then(() => {
         app.listen(PORT, () => {
