@@ -12,7 +12,7 @@ dotenv.config({
 }); // 기본 .env 파일을 로드
 dotenv.config({
     path: path.resolve(__dirname, `.env.${process.env.NODE_ENV}`),
-    override: true,
+    override: true, // 오버라이드 설정(덮어쓰기)
 }); // NODE_ENV에 따라서 적절한 .env 파일을 로드 (.env.development, .env.production)
 
 // process.env 객체를 통해 환경 변수에 접근
