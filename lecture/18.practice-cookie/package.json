@@ -1,11 +1,10 @@
 {
-  "name": "18.cookie-session",
+  "name": "18.practice",
   "version": "1.0.0",
-  "main": "cookie.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:cookie": "nodemon cookie-js",
-    "start:session": "nodemon session.js"
+    "start:cookie": "nodemon cookie-js"
   },
   "keywords": [],
   "author": "",
@@ -13,9 +12,10 @@
   "description": "",
   "dependencies": {
     "cookie-parser": "^1.4.6",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "express-session": "^1.18.0"
+    "mysql2": "^3.10.2"
   }
 }
