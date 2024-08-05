@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { FunctionComponent } from './Component';
 import { FunctionC } from './FunctionC';
+import Console from './Console';
 
 function App() {
   // const name = "로이";
@@ -64,6 +65,9 @@ function App() {
       <hr />
 
       <FunctionC title = '더 좋은 삶을 위한 철학 (리커버)' author = "마이클 슈어" price = '18,000원' type = "인문학"/>
+
+      <hr />
+      <Console text = "text값 가져오기" />
     
     </div>
 
