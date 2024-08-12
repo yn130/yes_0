@@ -82,7 +82,8 @@ export default function Prac1() {
         <div className='header'> 🥸 Post List</div>
       {posts.length > 0 ? (
         posts.map((post) => {
-            return <PostItem key={post.id} post={post} />
+        return <PostItem key={post.id} post={post} />
+        // return <PostItem key={post.id} post = {post.id} />
         })) : (<h2>Loading...</h2>)}
     </div>
   )
