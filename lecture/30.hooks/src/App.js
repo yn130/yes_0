@@ -5,14 +5,15 @@ import UseCallbackEx2 from './components/UseCallbackEx2';
 import UseReducerEx from './components/UseReducerEx';
 import useTitle from './hooks/useTitle';
 import Faq from './components/faq'
+import Form from './components/react-hook-form/form'
 
 function App() {
 
-  useTitle("React Hooks 학습중")
+  // useTitle("React Hooks 학습중")
 
   return (
     <div className="App">
-      <UseMemo />
+      {/* <UseMemo />
       <hr />
 
       <UseCallbackEx />
@@ -24,6 +25,9 @@ function App() {
       <UseReducerEx />
 
       <Faq />
+      <hr /> */}
+
+      <Form />
 
 
     </div>

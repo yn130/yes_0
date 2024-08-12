@@ -5,7 +5,7 @@ import Base from './Base'
 function App() {
   return (
     <div className="App">
-      <Base />
+      {/* <Base /> */}
       <hr />
       <Alphabet />
 
