@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles/Prac1.scss'
 
+
 export default function Prac1() {
   return (
     <div>
