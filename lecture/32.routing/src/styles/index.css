@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Main {
+  background-color: #ddd;
+}
+
+.Main.Dark {
+  background-color: #333;
+  color: #fff;
+}
