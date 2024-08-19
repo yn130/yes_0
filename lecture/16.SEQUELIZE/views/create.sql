@@ -42,3 +42,10 @@ select * from profile;
 select * from team;
 select * from game;
 select * from teamgame;
+
+use codingon;
+desc Player;
+desc Team;
+desc profile;
+desc game;
+desc teamgame;

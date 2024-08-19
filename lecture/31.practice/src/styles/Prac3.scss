@@ -1,0 +1,55 @@
+
+$ball : "ball1" red 10px, "ball2"  yellow 20px, "ball3" blue 30px;
+
+@mixin moveball($distance, $name) {
+    animation: #{$name} 3s infinite;
+    @keyframes #{$name} {
+        25% {
+            transform: translate($distance, 0);
+        }
+        50% {
+            transform: translate($distance, $distance);
+        }
+        75% {
+            transform: translate(0, $distance);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+    }
+
+
+.container {
+
+    .ball {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+        @each $name, $color, $size in $ball {
+            &.#{$name} {
+                background-color: $color;
+                @include moveball($size, $name);
+            }
+        };
+    }
+
+    // .redball {
+    //     @extend .ball;
+    //     background-color: $color-red;
+    //     @include moveball(10);
+    // }
+
+    // .yellowball {
+    //     @extend .ball;
+    //     background-color: $color-yellow;
+    //     @include moveball(20);
+    // }
+
+    // .blueball {
+    //     @extend .ball;
+    //     background-color: $color-blue;
+    //     @include moveball(30);
+    // }
+}
