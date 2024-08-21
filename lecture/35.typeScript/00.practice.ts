@@ -71,8 +71,41 @@ function sum2(...numbers: number[]): number {
         total += num;
     });
 return total;
-}
+};
     
 
 
 console.log(sum2(1, 2, 3, 4, 10)); 
+
+
+// --------------------------------------------------------------------------------- //
+
+
+function printSome1<T>(x: T, y: T){
+    console.log(x, y);
+}
+
+printSome1<string>('hi', 'hello');
+printSome1<number>(100, 200);
+printSome1<boolean[]>([true, false], [true, false]);
+
+// --------------------------------------------------------------------------------- //
+
+function arrElement<T>(arr: T[], index: number): T {
+    return arr[index];
+}
+
+console.log(arrElement<string>(["a", "b", "c"], 0)); 
+
+// --------------------------------------------------------------------------------- //
+
+// 첫번째 인자로 들어간 배열의 길이보다 큰 index 수(두번째 인자)가 전달된다면 return false 시키기!
+
+
+function arrElements<T>(arr: T[], index: number) {
+    if (index > arr.length -1 ) return false;
+    return arr[index];
+}
+
+console.log(arrElements<string>(['a'], 1)); // false
+
