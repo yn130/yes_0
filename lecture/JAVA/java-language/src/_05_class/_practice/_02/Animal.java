@@ -1,4 +1,4 @@
-package _05_class._practice;
+package _05_class._practice._02;
 
 
 public class Animal {

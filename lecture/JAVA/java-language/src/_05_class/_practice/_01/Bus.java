@@ -1,4 +1,4 @@
-package _05_class._practice;
+package _05_class._practice._01;
 
 public class Bus extends Vehicle {
     private int passengerCapacity;
