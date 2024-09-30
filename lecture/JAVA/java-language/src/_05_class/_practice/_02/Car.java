@@ -1,4 +1,4 @@
-package _05_class._practice._01;
+package _05_class._practice._02;
 
 public class Car extends Vehicle {
     private boolean convertible;
