@@ -16,3 +16,4 @@ public class Singleton {
     // public 접근 권한을 갖는 정적 메소드 선언
     public static Singleton getInstance() { return singleton; }
 }
+
