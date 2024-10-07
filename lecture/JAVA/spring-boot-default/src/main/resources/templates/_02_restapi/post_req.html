@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST 실습</title>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- js -->
+    <script src="/js/post.js" defer></script>
+</head>
+<body>
+<h2>폼 전송 - 실습</h2>
+<fieldset>
+<!--    <form action="/post/prac1" method="post">-->
+    <form id="form_prac2" class="form-card">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label>성별</label>
+        <input type="radio" id="male" name="gender" value="남자" required>
+        <label for="male">남자</label>
+        <input type="radio" id="female" name="gender" value="여자" required>
+        <label for="female">여자</label><br>
+
+        <label for="birth-year">생년월일</label>
+        <select id="birth-year" name="year"></select>년
+        <select id="birth-month" name="month"></select>월
+        <select id="birth-day" name="day"></select>일<br>
+
+        <label>관심사</label>
+        <input type="checkbox" id="travel" name="interest" value="여행">
+        <label for="travel">여행</label>
+        <input type="checkbox" id="fashion" name="interest" value="패션">
+        <label for="fashion">패션</label>
+        <input type="checkbox" id="food" name="interest" value="음식">
+        <label for="food">음식</label><br>
+
+        <button type="button" onclick="prac2();">회원가입</button>
+    </form>
+</fieldset>
+
+</body>
+</html>
+
+
+
+
